@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+
   const [myuser, setMyuser] = useState([]);
 
   const loadUsers = () => {
@@ -10,7 +11,9 @@ export default function Home() {
       setMyuser(res.data.reverse());
     });
   };
-
+  useEffect(() => {
+    loadUsers();
+  },);
      // Now Delete data
   function Delete(id){
     axios.delete(`http://localhost:8000/users/${id}`)
@@ -18,9 +21,7 @@ export default function Home() {
       loadUsers()
       );
   }
-  useEffect(() => {
-    loadUsers();
-  },);
+ 
 
   return (
     <div className="w-full h-full flex flex-col py-10 px-8 ">
@@ -55,10 +56,9 @@ export default function Home() {
                   >
                     View
                   </Link>
-                 <button className="bg-blue-500 text-white rounded-xl px-6 py-2">
+                 <Link to={`/edit-user/${data.id}`} className="bg-blue-500 text-white rounded-xl px-6 py-2">
                    Edit
-
-                 </button>
+                 </Link>
 
                   <button onClick={()=>Delete(data.id)} className="bg-red-500 text-white rounded-xl px-3 py-2">Delete</button>
                 </td>

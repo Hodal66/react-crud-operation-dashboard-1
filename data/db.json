@@ -1,58 +1,22 @@
 {
   "users": [
     {
-      "id": 3,
-      "name": "murundi",
-      "email": "murundi@gmail.com",
-      "address": {
-        "suite": "kigali-ff",
-        "street": "kk-320",
-        "city": "Kigali",
-        "zipCode": "202333",
-        "geo": {
-          "lat": "30.900",
-          "lng": "20.989"
-        }
-      },
-      "phone": "0782990900",
-      "website": "murundi.org",
-      "company": {
-        "name": "vvip",
-        "carnes": "real-time e-markets"
-      }
-    },
-    {
-      "id": 4,
-      "name": "rwema",
-      "email": "rwema@gmail.com",
-      "address": {
-        "suite": "kigali-gasabo",
-        "street": "kk-320",
-        "city": "Kigali",
-        "zipCode": "202333",
-        "geo": {
-          "lat": "30.900",
-          "lng": "20.989"
-        }
-      },
-      "phone": "0782439775",
-      "website": "rwema.org",
-      "company": {
-        "name": "Romanguena-singapull",
-        "carnes": "real-time e-markets"
-      }
-    },
-    {
-      "name": "fdg",
-      "email": "dfgsdf",
-      "phone": "sdfg",
-      "id": 6
-    },
-    {
-      "name": "muheto",
+      "name": "Muheto",
       "email": "mhthodol@gmail.com",
-      "phone": "038849",
-      "id": 7
+      "phone": "0782439775",
+      "id": 1
+    },
+    {
+      "name": "testkk",
+      "email": "test@gmail.com",
+      "phone": "1234567890",
+      "id": 2
+    },
+    {
+      "name": "hhhood",
+      "email": "hhodal.gmail.com",
+      "phone": "23468y",
+      "id": 3
     }
   ]
 }

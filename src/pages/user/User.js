@@ -2,6 +2,7 @@
 import React,{useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import axios from "axios";
+import { Link } from "react-router-dom";
 function User() {
   const [myuser,setMyuser]=useState([]);
 
@@ -17,8 +18,9 @@ const {id}=useParams()
 
   return (
     <>
-    <div><h1 className='text-6xl  flex items-center justify-center text-blue-500 border-b-4 border-double'>User Details</h1></div>
-    <div className='w-full h-full  flex items-center justify-center pt-10 text-4xl'>
+    <div><h1 className='text-6xl  flex flex-col items-center justify-center text-blue-500 border-b-4 border-double'>User Details</h1></div>
+    <Link to="/" className='flex text-gray-200 bg-gray-500 px-4 mx-96 font-semibold font-Inter py-4 items-center justify-center'>Back To Home</Link>
+    <div className='w-full h-full  flex items-center justify-center pt-5 text-4xl'>
      
       {
         myuser && (
@@ -30,7 +32,7 @@ const {id}=useParams()
             <h2 className='text-gray-600 font-semibold font-Inter border-b-4 border-gray-900'> Name</h2>
             <h2 className='text-gray-600 font-semibold font-Inter border-b-4 border-gray-900'> Email</h2>
             <h2 className='text-gray-600 font-semibold font-Inter border-b-4 border-gray-900'> Phone</h2>
-            <h2 className='text-gray-600 font-semibold font-Inter border-b-4 border-gray-900'> Website</h2>
+           
             
 
             </div>
@@ -38,7 +40,7 @@ const {id}=useParams()
             <h2 className='text-gray-600 font-semibold font-Inter border-b-4 border-gray-900'> {myuser.name}</h2>
             <h2 className='text-gray-600 font-semibold font-Inter border-b-4 border-gray-900'> {myuser.email}</h2>
             <h2 className='text-gray-600 font-semibold font-Inter border-b-4 border-gray-900'> {myuser.phone}</h2>
-            <h2 className='text-gray-600 font-semibold font-Inter border-b-4 border-gray-900'> {myuser.website}</h2>
+            
          
 
             </div>

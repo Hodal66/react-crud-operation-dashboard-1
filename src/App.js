@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import User from './pages/user/User';
 import Adduser from "./pages/user/Adduser";
+import Edit from './pages/user/Edit';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -13,6 +14,7 @@ const Apps = () => {
     { path: "/", element: <Home /> },
     { path: "/users/:id", element: <User /> },
     { path: "/add-user", element: <Adduser /> },
+    { path: "/edit-user/:id", element: <Edit /> },
     // ...
   ]);
   return routes;

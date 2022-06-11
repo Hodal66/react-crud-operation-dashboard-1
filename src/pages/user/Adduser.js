@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from 'axios'
 function Adduser() {
   const [name, setName] = useState("");
@@ -25,6 +26,7 @@ function Adduser() {
   }
   return (
     <div className="w-screen h-full justify-center items-center">
+       <Link to="/" className='flex text-gray-200 bg-gray-500 px-4 mx-96 font-semibold font-Inter py-4 items-center justify-center'>Back To Home</Link>
       <form className="flex flex-col items-center">
         <h1 className="flex justify-center  m-8 text-6xl text-blue-500">
           Enter your Details
@@ -53,7 +55,6 @@ function Adduser() {
         ></input>
         <button
         onClick={Submit} 
-        
         className="w-[70%] text-4xl tont-Montserrat outline-none py-4 px-10 border-4 border-blue-500 rounded-sm mt-2 font-Montserrat ml-16 bg-blue-500 text-yellow-50">
           Add User Now
         </button>
